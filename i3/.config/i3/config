@@ -126,10 +126,10 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
+set $ws1 "1:browser"
+set $ws2 "2:kitty"
+set $ws3 "3:misc"
+set $ws4 "4:misc"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -201,8 +201,8 @@ bindsym $mod+r mode "resize"
 ### Custom configurations ###
 
 # --- Workspace key mappings
-bindcode $mod+110 workspace next 
-bindcode $mod+115 workspace prev 
+bindcode $mod+110 workspace prev 
+bindcode $mod+115 workspace next
 bindsym $mod+Tab workspace back_and_forth
 
 # --- Screen brightness key mappings
@@ -223,11 +223,14 @@ exec_always feh --bg-scale /home/chiu/Pictures/rog_wallpaper.jpg
 # --- Turn off the laptop screen
 # exec_always xrandr --output eDP-1 --off
 
-# --- Remap the key
+# --- Keyboard config
 exec_always setxkbmap -option caps:escape,ctrl:swap_lalt_lctl
 # --- DEBUG ---
 # exec_always /usr/bin/xmodmap ~/.dotfiles/keyboard/custom_mapping
 # exec_always --no-startup-id /home/chiu/.dotfiles/keyboard/keyboard.sh
+
+# --- Mouse config
+exec_always --no-startup-id xset r rate 200 30
 
 # --- Polybar
 exec_always --no-startup-id killall polybar
