@@ -201,8 +201,8 @@ bindsym $mod+r mode "resize"
 ### Custom configurations ###
 
 # --- Workspace key mappings
-bindcode $mod+110 workspace prev
-bindcode $mod+115 workspace next
+bindcode $mod+110 workspace next 
+bindcode $mod+115 workspace prev 
 bindsym $mod+Tab workspace back_and_forth
 
 # --- Screen brightness key mappings
