@@ -220,7 +220,8 @@ exec --no-startup-id syndaemon -K -i 0.2 -R &
 exec_always sh ~/.screenlayout/msi_dvlab27.sh
 
 # --- Wallpaper config
-exec_always feh --bg-scale /home/chiu/Pictures/rog_wallpaper.jpg
+# exec_always feh --bg-scale /home/chiu/Pictures/rog_wallpaper.jpg
+exec_always feh --bg-scale /home/chiu/Pictures/rog_wallpaper_citylight.jpg
 
 # --- Turn off the laptop screen
 # exec_always xrandr --output eDP-1 --off
